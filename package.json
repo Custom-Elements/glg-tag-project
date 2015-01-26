@@ -1,0 +1,18 @@
+{
+  "name": "glg-tag-project",
+  "version": "0.0.0",
+  "dependencies": {
+    "polymer-serve": "git://github.com/custom-elements/polymer-serve",
+    "polymer": "git://github.com/custom-elements/polymer#master",
+    "ui-styles": "git://github.com/custom-elements/ui-styles#master",
+    "ui-fonts": "git://github.com/custom-elements/ui-fonts#master",
+    "ui-progress": "git://github.com/custom-elements/ui-progress",
+    "ui-pill": "git://github.com/custom-elements/ui-pill",
+    "ui-typeahead": "git://github.com/custom-elements/ui-typeahead",
+    "glg-current-user": "git://github.com/custom-elements/glg-current-user"
+  },
+  "license": "ISC",
+  "scripts": {
+    "test": "polymer-serve ."
+  }
+}

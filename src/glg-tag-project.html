@@ -1,0 +1,33 @@
+<link rel="import" href="../node_modules/ui-typeahead/src/ui-typeahead.html" />
+<link rel="import" href="../node_modules/ui-pill/src/ui-pill.html" />
+<link rel="import" href="../node_modules/ui-progress/src/ui-progress.html" />
+<link rel="import" href="../node_modules/glg-current-user/src/glg-current-user.html" />
+<link rel="import" href="../lib/core-ajax.html" />
+
+<polymer-element name="glg-tag-project" attributes="projectid tags tagoptions alltags src">
+<template>
+  <link rel="stylesheet" type="text/css" href="./glg-tag-project.less">
+  <glg-current-user id="user"></glg-current-user>
+  <core-ajax id="projecttags" response="{{tags}}" handleAs="json"></core-ajax>
+  <core-ajax id="alltags" response="{{alltags}}" handleAs="json"></core-ajax>
+  <core-ajax id="addtag"></core-ajax>
+  <core-ajax id="removetag"></core-ajax>
+  <ui-typeahead id="tags" placeholder="Add some tags!" value="{{tags}}" multiselect
+    on-itemadded="{{addtag}}"
+    on-itemremoved="{{removetag}}"
+    on-inputchange="{{filterAvailableTags}}">
+    <icon tag></icon>
+    <template value>
+      <value><ui-pill>{{ name }}</ui-pill></value>
+    </template>
+    <!-- dynamically templated items in the selection list -->
+    <template id="typeahead-template-multiselect" repeat="{{tagoptions}}">
+      <!-- typeahead items are the drop down -->
+      <ui-typeahead-item>
+        <span> {{ name }}</span>
+      </ui-typeahead-item>
+    </template>
+  </ui-typeahead>
+</template>
+<script src="./glg-tag-project.litcoffee"></script>
+</polymer-element>
