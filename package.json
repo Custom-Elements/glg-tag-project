@@ -9,7 +9,7 @@
     "ui-progress": "git://github.com/custom-elements/ui-progress",
     "ui-pill": "git://github.com/custom-elements/ui-pill",
     "ui-typeahead": "git://github.com/custom-elements/ui-typeahead",
-    "glg-current-user": "git://github.com/custom-elements/glg-current-user"
+    "glg-current-user": "git://github.com/custom-elements/glg-current-user#0.0.5"
   },
   "license": "ISC",
   "scripts": {
